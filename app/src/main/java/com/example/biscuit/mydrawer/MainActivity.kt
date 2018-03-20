@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar
 import android.support.v4.view.GravityCompat
 import com.example.biscuit.mydrawer.com.example.biscuit.mydrawer.fragments.BtcFragment
 import com.example.biscuit.mydrawer.com.example.biscuit.mydrawer.fragments.EthFragment
-import com.example.biscuit.mydrawer.com.example.biscuit.mydrawer.fragments.HomeFragment
 import com.example.biscuit.mydrawer.com.example.biscuit.mydrawer.fragments.TrxFragment
 
 
