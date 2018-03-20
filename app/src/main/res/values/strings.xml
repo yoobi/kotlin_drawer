@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyDrawer</string>
+    <string name="home">Accueil</string>
+    <string name="btc">BTC</string>
+    <string name="eth">ETH</string>
+    <string name="trx">TRX</string>
+
+</resources>
