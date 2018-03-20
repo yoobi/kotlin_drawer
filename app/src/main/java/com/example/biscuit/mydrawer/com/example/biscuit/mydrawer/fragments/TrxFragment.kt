@@ -15,9 +15,9 @@ import kotlinx.android.synthetic.main.trx_fragment.*
 
 class TrxFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater!!.inflate(R.layout.trx_fragment, container, false)
+        val view: View = inflater.inflate(R.layout.trx_fragment, container, false)
         val btn: Button = view.findViewById<Button>(R.id.trx_btn)
         btn.setOnClickListener{
             btn.visibility = View.GONE
