@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 })
 
-        supportFragmentManager.beginTransaction().replace(R.id.content_frame, BtcFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.content_frag, BtcFragment()).commit()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -61,13 +61,13 @@ class MainActivity : AppCompatActivity() {
 
         when (item.itemId) {
             R.id.nav_btc -> {
-                fragmentManager.replace(R.id.content_frame, BtcFragment()).commit()
+                fragmentManager.replace(R.id.content_frag, BtcFragment()).commit()
             }
             R.id.nav_eth -> {
-                fragmentManager.replace(R.id.content_frame, EthFragment()).commit()
+                fragmentManager.replace(R.id.content_frag, EthFragment()).commit()
             }
             R.id.nav_trx -> {
-                fragmentManager.replace(R.id.content_frame, TrxFragment()).commit()
+                fragmentManager.replace(R.id.content_frag, TrxFragment()).commit()
             }
         }
     }
