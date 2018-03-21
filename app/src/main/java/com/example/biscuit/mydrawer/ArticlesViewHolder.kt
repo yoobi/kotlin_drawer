@@ -11,6 +11,7 @@ class ArticlesViewHolder(itemView: View) : ViewHolder(itemView) {
     var articleImage: ImageView? = itemView.findViewById(R.id.articles_imv)
     var articleTitle: TextView? = itemView.findViewById(R.id.articles_title)
     var articleDetail: TextView? = itemView.findViewById(R.id.articles_detail)
+    var articleLink: TextView? = itemView.findViewById(R.id.articles_link)
 
 
 

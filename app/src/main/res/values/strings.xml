@@ -4,5 +4,6 @@
     <string name="btc">BTC</string>
     <string name="eth">ETH</string>
     <string name="trx">TRX</string>
+    <string name="menu_refresh" />
 
 </resources>

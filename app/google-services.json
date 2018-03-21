@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1037954096427",
+    "firebase_url": "https://mydrawer-25048.firebaseio.com",
+    "project_id": "mydrawer-25048",
+    "storage_bucket": "mydrawer-25048.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037954096427:android:4cd3a5e59130e2fc",
+        "android_client_info": {
+          "package_name": "com.example.biscuit.mydrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037954096427-uv76257v2dg4erv0i15nbagth4t10bli.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.biscuit.mydrawer",
+            "certificate_hash": "b8d060184d2fa09d757352d295e0b775eb0d0dc6"
+          }
+        },
+        {
+          "client_id": "1037954096427-d8mihi23954nfn83q2qplcmj4f0n8n9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT5j12z_v6QBSTpMsHldVPc8Z5lmQQUUU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037954096427-d8mihi23954nfn83q2qplcmj4f0n8n9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

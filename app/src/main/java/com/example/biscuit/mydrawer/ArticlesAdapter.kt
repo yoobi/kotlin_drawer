@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 
 class ArticlesAdapter : RecyclerView.Adapter<ArticlesViewHolder>(){
 
-    var articles = arrayListOf<Articles>()
+    var articles: List<Articles>? = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticlesViewHolder {
         val view = parent.inflate(R.layout.cell_article)
@@ -15,16 +15,21 @@ class ArticlesAdapter : RecyclerView.Adapter<ArticlesViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return articles.size
+        return if(articles == null) {
+            0
+        } else{
+            articles!!.size
+        }
     }
 
     override fun onBindViewHolder(holder: ArticlesViewHolder, position: Int) {
-        val article = articles[position]
+        val article = articles?.get(position)
         val context = holder.itemView.context
 
-        holder.articleTitle?.text = article.title
-        Glide.with(context).load(article.image).into(holder.articleImage!!)
-        holder.articleDetail?.text = article.description
+        holder.articleTitle?.text = article?.title
+        Glide.with(context).load(article?.urlImage).into(holder.articleImage!!)
+        holder.articleDetail?.text = article?.description
+        holder.articleLink?.text = article?.link
 
         when(position) {
             0 -> holder.itemView.setOnClickListener({

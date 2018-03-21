@@ -5,6 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center">
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/articles_rv"
         android:layout_width="match_parent"
@@ -12,5 +17,6 @@
         tools:listitem="@layout/cell_article"
         tools:itemCount="5"
         />
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>
