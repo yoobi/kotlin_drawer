@@ -24,8 +24,27 @@ class ArticleService {
         api = retrofit.create(ApiInterface::class.java)
     }
 
-    fun getArticles(callback: ArticlesReceivedCallback) {
+    fun getBitcoinArticles(callback: ArticlesReceivedCallback) {
         api?.getBitcoinArticles()?.enqueue(object: Callback<ArticlesObjectResponse>{
+            override fun onFailure(call: Call<ArticlesObjectResponse>?, t: Throwable?) {
+                callback.onInternetError()
+            }
+
+            override fun onResponse(call: Call<ArticlesObjectResponse>?, response: Response<ArticlesObjectResponse>?) {
+                val image = response?.body()?.channel?.image
+                val articles = response?.body()?.channel?.articles
+                articles?.forEach {
+                    it.urlImage = image?.urlImage
+                }
+                callback.onArticlesReceived(articles)
+            }
+
+        })
+
+    }
+
+    fun getEthereumArticles(callback: ArticlesReceivedCallback) {
+        api?.getEthereumArticles()?.enqueue(object: Callback<ArticlesObjectResponse>{
             override fun onFailure(call: Call<ArticlesObjectResponse>?, t: Throwable?) {
                 callback.onInternetError()
             }

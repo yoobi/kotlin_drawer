@@ -18,8 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailsArticleActivity" />
+        <activity android:name=".DetailsArticleActivity">
+            <intent-filter>
+                <action android:name="activity_detail_chris"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
         <activity android:name=".WebViewActivity" />
+        <activity android:name=".TutorialActivity" />
 
         <service android:name=".Fcm">
             <intent-filter>

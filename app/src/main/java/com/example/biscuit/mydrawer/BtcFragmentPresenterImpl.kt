@@ -12,13 +12,15 @@ class BtcFragmentPresenterImpl(val viewCallback: BtcViewInterface) : BtcFragment
     var service = ArticleService()
 
     override fun refreshArticlesList(){
-        service.getArticles(object: ArticlesReceivedCallback{
+        viewCallback.onShowLoading()
+        service.getBitcoinArticles(object: ArticlesReceivedCallback{
             override fun onInternetError() {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                viewCallback.onDismissLoading()
             }
 
             override fun onArticlesReceived(articles: ArrayList<Articles>?) {
                 viewCallback.onArticlesReceived(articles)
+                viewCallback.onDismissLoading()
             }
         })
     }
